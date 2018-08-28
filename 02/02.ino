@@ -1,4 +1,4 @@
-int switchState=0
+int switchState=0;
 
 void setup(){
   pinMode(3,OUTPUT);
