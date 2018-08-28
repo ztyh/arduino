@@ -33,7 +33,7 @@ void loop(){
   Serial.print("\t Green: ");
   Serial.print(greenSensorValue);
   Serial.print("\t Blue: ");
-  Serial.print(blueSensorValue);
+  Serial.println(blueSensorValue);
   redValue=redSensorValue/4;
   greenValue=greenSensorValue/4;
   blueValue=blueSensorValue/4;
@@ -42,7 +42,7 @@ void loop(){
   Serial.print("\t Green: ");
   Serial.print(greenValue);
   Serial.print("\t Blue: ");
-  Serial.print(blueValue);
+  Serial.println(blueValue);
   analogWrite(redLEDPin,redValue);
   analogWrite(greenLEDPin,greenValue);
   analogWrite(blueLEDPin,blueValue);
