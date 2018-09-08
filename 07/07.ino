@@ -1,16 +1,16 @@
 int buttons[6];
-int buttons[0]=2;
 
 int notes[]={262,294,330,349};
 
 void setup(){
+  buttons[0]=2;
   Serial.begin(9600);
 }
 
 void loop(){
   int keyVal=analogRead(A0);
   Serial.println(keyVal);
-  if(keyVal==1023){
+  if(keyVal>=1020&&keyVal<=1030){
     tone(8,notes[0]);
   }else if(keyVal>=990&&keyVal<=1010){
     tone(8,notes[1]);
