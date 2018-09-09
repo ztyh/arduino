@@ -3,19 +3,19 @@ unsigned long previousTime=0;
 int switchState=0;
 int prevSwitchState=0;
 int led=2;
-long interval=600000;
+long interval=1000;
 
 void setup(){
   for(int x=2;x<8;x++){
     pinMode(x,OUTPUT);
   }
-  pinMode(switchPin,INPUT):
+  pinMode(switchPin,INPUT);
 }
 
 void loop(){
   unsigned long currentTime=millis();
   if(currentTime-previousTime>interval){
-    previousTme=currentTime;
+    previousTime=currentTime;
     digitalWrite(led,HIGH);
     led++;
     if(led==7){
