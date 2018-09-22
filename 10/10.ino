@@ -13,6 +13,7 @@ int motorSpeed=0;
 int motorDirection=1;
 
 void setup(){
+  Serial.begin(9600);
   pinMode(directionSwitchPin,INPUT);
   pinMode(onOffSwitchStateSwitchPin,INPUT);
   pinMode(controlPin1,OUTPUT);
@@ -23,9 +24,10 @@ void setup(){
 
 void loop(){
   onOffSwitchState=digitalRead(onOffSwitchStateSwitchPin);
-  delay(1)
+  delay(1);
   directionSwitchState=digitalRead(directionSwitchPin);
-  motorSpeed=analogRead(potPin)/4;
+  motorSpeed=analogRead(potPin)/8;
+  Serial.println(motorSpeed);
   if(onOffSwitchState!=previousOnOffSwitchState){
     if(onOffSwitchState==HIGH){
       motorEnabled=!motorEnabled;
