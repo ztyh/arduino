@@ -1,6 +1,6 @@
-#include <CapacitySensor.h>
+#include <CapacitiveSensor.h>
 CapacitiveSensor capSensor=CapacitiveSensor(4,2);
-int threshold=1000;
+int threshold=300;
 const int ledPin=12;
 
 void setup(){

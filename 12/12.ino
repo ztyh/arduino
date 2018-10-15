@@ -7,8 +7,8 @@ const int greenLed=4;
 const int redLed=5;
 int knockVal;
 int switchVal;
-const int quietKnock=10;
-const int loudKnock=100;
+const int quietKnock=100;
+const int loudKnock=200;
 boolean locked=false;
 int numberOfKnocks=0;
 
@@ -57,7 +57,7 @@ void loop(){
 }
 
 boolean checkForKnock(int value){
-  if(value>quietKnock&&loudKnock){
+  if(value>quietKnock&&value<loudKnock){
     digitalWrite(yellowLed,HIGH);
     delay(50);
     digitalWrite(yellowLed,LOW);
