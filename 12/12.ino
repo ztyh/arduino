@@ -52,6 +52,7 @@ void loop(){
       digitalWrite(greenLed,HIGH);
       digitalWrite(redLed,LOW);
       Serial.println("The nox is unlocked!");
+      numberOfKnocks=0;
     }
   }
 }

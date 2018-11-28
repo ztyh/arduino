@@ -4,12 +4,12 @@ PImage logo;
 int bgcolor=0;
 
 void setup(){
+  logo=loadImage("https://www.arduino.cc/en/pub/skins/arduinoWide/img/logo.png");
+  size(400,200);
   colorMode(HSB,255);
-  logo=loadImage("http://arduino.cc/logo.png");
-  size(logo.width,logo.height);
   println("Available serial ports:");
   println(Serial.list());
-  myPort=new Serial(this,Serial.list()[0],9600);
+  myPort=new Serial(this,Serial.list()[1],9600);
 }
 
 void draw(){
