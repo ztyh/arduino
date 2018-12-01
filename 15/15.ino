@@ -6,7 +6,7 @@ void setup(){
 
 void loop(){
   digitalWrite(optoPin,HIGH);
-  delay(15);
+  delay(1000);
   digitalWrite(optoPin,LOW);
-  delay(21000);
+  delay(1000);
 }
